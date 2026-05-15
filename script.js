@@ -1,18 +1,22 @@
 //complete this code
 class Person {
+
+	public._name=name;
+	public._age=age;
+	
 	constructor(name:string,age:number){
 		this.name=name;
 		this.age=age;
 	}
 
-	get()
+	get name: string()
 	{
-		return name;
+		return this._name;
 	}
 
-	set()
+	set age(age: number)
 	{
-		return age;
+		this._age=age;
 	}
 }
 
@@ -22,21 +26,20 @@ class Student extends Person {
 		this.age=age;
 	}
 
-	void study()
+	study():void
 	{
-		return name + " is studying";
+		console.log(this.name + " is studying");
 	}
 }
 
 class Teacher extends Person {
-	constructor(name,age){
-		this.name=name;
-		this.age=age;
+	constructor(name:string,age:number){
+		super(name,age)
 	}
 
-	void teach()
+	teach(): void
 	{
-		return name+" is teaching"
+		console.log(this.name+" is teaching")
 	}
 }
 
